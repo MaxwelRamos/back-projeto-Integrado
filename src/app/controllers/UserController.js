@@ -34,7 +34,7 @@ class UserController {
         if (!(await schema.isValid(req.body))) {
             return res.status(401).json({
                 error: true,
-                code: 103,
+                code: 101,
                 message: "Error: Dados inválidos!"
             });
         }
@@ -54,7 +54,7 @@ class UserController {
         const user = await User.create(dados, (err) => {
             if (err) return res.status(401).json({
                 error: true,
-                code: 101,
+                code: 103,
                 message: "Error: Usuário não foi cadastrado com sucesso!"
             });
 
