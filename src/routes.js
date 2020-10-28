@@ -11,7 +11,7 @@ routes.get('/', (req, res) => {
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 
-routes.post('/moedas', MoedasController.store);
+routes.post('/moedas', MoedasController.store1);
 routes.get('/somaEnviadas', MoedasController.somaEnviadas);
 
 
