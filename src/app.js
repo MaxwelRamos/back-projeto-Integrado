@@ -1,9 +1,9 @@
-const express = require("express");
-const routes = require("./routes");
-const cors = require("cors");
-// import express from 'express';
-// import routes from './routes';
-// import cors from 'cors';
+//const express = require("express");
+// const routes = require("./routes");
+// const cors = require("cors");
+import express from 'express';
+import routes from './routes';
+import cors from 'cors';
 
 import './database';
 
@@ -27,8 +27,7 @@ class App{
         })
     }
     routes(){
-        this.app.use(routes);
-    }
+         this.app.use(routes);    }
 }
 
 module.exports = new App().app;
