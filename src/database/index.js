@@ -5,6 +5,7 @@ class DataBase {
         this.mongoDataBase();
     }
     mongoDataBase() {
+        mongoose.Promise = global.Promise;
         this.mongoDBConnection = mongoose.connect('mongodb+srv://dbUser:senha@cluster0-5eiq0.mongodb.net/test?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true
